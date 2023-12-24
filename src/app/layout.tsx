@@ -25,3 +25,4 @@ export default function RootLayout({
     </html>
   );
 }
+//as it is next.js we have to initialize providers inside layout

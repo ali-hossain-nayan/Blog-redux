@@ -27,7 +27,7 @@ export default function Posts() {
 
     dispatch(addPost(newPost));
 
-    // Reset form fields
+    // Reset form fields again empty
     setTitle('');
     setDescription('');
   };
@@ -45,7 +45,7 @@ export default function Posts() {
 
     dispatch(updatePost(updatedPost));
 
-    // Reset form fields and close edit mode
+    // Reset form fields and close edit mode like initial stage
     setTitle('');
     setDescription('');
     setEditMode(false);
@@ -92,7 +92,7 @@ export default function Posts() {
         <button className="bg-purple-700 text-white rounded-md px-4 py-2" onClick={handleAddPost}>Add New Post</button>
       </form>
       <h1 className="text-2xl font-bold mt-6">Posts</h1>
-      {posts ? (
+      {posts ? (//if there is post then go for edit
         posts.map((post: any) => (
           <div key={post.id} className="border border-gray-300 p-4 my-4">
             <h2 className="text-xl font-bold">{post.title}</h2>
@@ -111,7 +111,7 @@ export default function Posts() {
                 Delete
               </button>
             </div>
-            {editMode && postIdToEdit === post.id && (
+            {editMode && postIdToEdit === post.id && (//if editmode true and match the id with the storage then can update otherwise not
               <div className="mt-4">
                 <input
                   type="text"
