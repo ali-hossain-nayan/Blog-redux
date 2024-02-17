@@ -78,7 +78,7 @@ export default function Posts() {
       <form className="flex flex-col space-y-4" onSubmit={handleAddPost}>
         <input
           type="text"
-          className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
+          className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500 text-blue-700"
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -86,7 +86,7 @@ export default function Posts() {
         <textarea
           placeholder="Description"
           value={description}
-          className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
+          className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500 text-blue-700"
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
         <button className="bg-purple-700 text-white rounded-md px-4 py-2" onClick={handleAddPost}>Add New Post</button>
